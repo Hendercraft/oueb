@@ -1,0 +1,69 @@
+form{
+	margin: 0 auto;
+	width : 80%;
+	padding : 1em;
+	border : 1px solid #CCCCCC;
+	text-align:center;
+}
+
+form div {
+	margin-top:1em;
+	margin-left:auto;
+	margin-right:auto;
+	windth:80%;
+}
+
+label {
+	font-family:verdana;
+	color:white;
+	font-weight:bold;
+	display:inline-block;
+	width:100px;
+	text-align: right;
+	padding:5px 20px;
+	background-color:Midnightblue;
+	border-radius:25px;
+}
+
+input, textarea {
+	font: 1em sans-serif;
+	width : 50%;
+	box-sizing:border-box;
+	border: 1px solid #999999;
+	margin-left:40px;
+}
+
+input:focus, textarea:focus{
+	border-color: #000000;
+}
+
+textarea {
+	vertical-align:top;
+	height:5em;
+}
+
+.formbutton{
+	background-color:#EEEEEE;
+	padding:20px;
+	border-radius: 25px;
+}
+
+button {
+	color: white;
+	font-weight:bold;
+	margin-left: .5em;
+	background-color: MidnightBlue;
+	padding: 8px 30px;
+	border-radius: 25px;
+}
+
+button:hover{
+	font-size:1.1em;
+	padding: 9px 32px;
+	background-color: DarkCyan;
+}
+
+.msg, .msg p {
+	font-size:1.1em;
+	text-align:center;
+}
