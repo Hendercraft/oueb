@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses>
+    <course numéro="8">
+        <gagnant temps='35'>Dupont</gagnant>
+        <_2nd> Durand </_2nd>
+        <les_arbitres>
+            <arbitre1 nom='Martin'/>
+            <arbitre2 nom='Legrand'/>
+        </les_arbitres>
+        <début format_heure="hh:mm"> 13:00 </début>
+        <fin format_heure="hh:mm"> 13:53 </fin>
+    </course>
+    <course numéro="9">
+        <gagnant>Rameau</gagnant>
+    </course>
+</courses>

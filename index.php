@@ -1,53 +1,38 @@
-<?php
-$output='';//création d'une variable dans laquelle nous allons concater ce que l'on voudra afficher
-if(session_status() == PHP_SESSION_ACTIVE)
-{
-    if($_SESSION['loggedin'] == TRUE){//si l'utilisateur est connecté
-        $tempnom=$_SESSION['nom'];
-        $tempprenom=$_SESSION['prenom'] ;//définition des variable pour pouvoir les introduire dans la variable $output
-        $output.="Vous êtes connectés en tant que $tempnom $tempprenom" ;
-        if($_SESSION['email'] == "admin@admin.admin"){//si l'utilisateur posséde une session administrateur
-            $hidden="color: red;";
-            $output .='<a href=\'stats.php\'><button> Statistiques de votre site</button></a> ';
-            //le bouton de qui permet d'acceder aux statistiques sera affiché
-        }
-        else
-        {
-            $hidden="display: none;";
-        }
-    }
-    else{
-
-        session_unset();
-        session_destroy();
-        $output.='You are not logged in !';//préviens l'utilisateur qu'il n'est pas connecté
-
-    }
-}
-echo '
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>CVHUB</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Blog du Oueb</title>
+    <link rel="stylesheet" href="./Styles/php_examples.css">
 </head>
 <body>
-<p>
-    <br><br>
-    '.$output.'
-</p>
-<a href="experience.php"><button type="button">Entrez une nouvelle experience professionelle</button></a>
-<br><br>
-<a href="periode_etude.php"><button type="button">Entrez une nouvelle université/formation</button></a>
-<br><br>
-<a href="user_competences.php"><button type="button">Entrez une nouvelle compétence</button></a>
-<br><br>
-<a href="update.html"><button type="button">Mettez à jour votre profil</button></a>
-<br><br>
-<a href="user_data.php"><button type="button">Supprimez des formations/université/compétences</button></a>
-<br><br>
-<a href="cvhub.html"><button type="button">Créez votre CV!</button></a>
+<div id="MainContainer">
+
+    <div class="header">
+        <hr>
+        <nav>
+        <a>Login</a>
+        <a>Register</a>
+        </nav>
+        <div>Login</div>
+        <hr>
+    </div>
+
+    <p>Bienvenue dans les années 2005, non seulement vous avez un tout nouveau pc avec windows xp, mais vous avez aussi
+        un magnifique modem adsl qui vous permet de surfer a fond !! <br>
+    Vous allez donc naturellement sur des blogs taper la causette ! <p>
+
+    <h2>PHP : du code côté serveur</h2>
+    <p>Dans le processus décrit plus tôt, <b>PHP intervient à l'intérieur du serveur, juste avant qu'il envoie la réponse.</b></p>
+    <p>Le code PHP s'éxécute et ré-écrit le html de la page en fonction du programme et des données fournies. Et c'est après cette ré-écriture que le HTML est envoyé au client. <b>Le navigateur va donc recevoir un HTML personnalisé en fonction des circonstances</b></p>
+
+    <div class="footer">
+        <hr>
+        <p>Ruff Guillaume - Fait avec les pieds</p>
+        <hr>
+    </div>
+</div>
 </body>
-</html>';
+
+
+</html>

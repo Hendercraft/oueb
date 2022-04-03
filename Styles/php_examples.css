@@ -72,11 +72,6 @@ b{
 	color:#000000;
 }
 
-/*Même chose pour la classe "goodluck"*/
-.goodluck{
-	font-size:30px;
-	font-weight:bold;
-}
 
 /* On peut combiner un tag et une classe ainsi : ces propriétés s'appliqueront
 aux images qui sont également de la classe "center" */
@@ -96,16 +91,24 @@ hr{
 }
 
 /* On définit des propriétés pour deux classes en même temps en les séparant par des virgules*/
-.header, .footer{
+footer{
 	background-color:#252544;
 	padding: 30px 0px;
 	margin: 0px -10px;
 }
+.header{
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	max-width: 800px;
+}
+nav {
+	flex: 1;
+	text-align: center;
+}
 
-/* Lorsque deux éléments se suivent sans séparateur, cela signifie une hiérarchie:
-ici, nous attribuons des propriétés aux "<h1> qui sont à l'intérieur d'éléments de classe header"*/
-.header h1{
-	background-color:#252544;
+nav > a {
+	padding: 0 10px;
 }
 
 /*On peut combiner des hiérarchies et une déclaration multiples pour être encore plus efficace!*/
